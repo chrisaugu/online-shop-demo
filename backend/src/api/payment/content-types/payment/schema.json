@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "payments",
+  "info": {
+    "singularName": "payment",
+    "pluralName": "payments",
+    "displayName": "Payment"
+  },
+  "attributes": {
+    "stripePaymentIntentId": {
+      "type": "string",
+      "unique": true,
+      "required": true,
+      "description": "Unique Stripe Payment Intent ID from Stripe API"
+    },
+    "amount": {
+      "type": "decimal",
+      "required": true,
+      "description": "Payment amount in decimal format (converted to cents by Stripe)"
+    },
+    "currency": {
+      "type": "string",
+      "default": "usd",
+      "description": "ISO 4217 currency code"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": ["pending", "succeeded", "failed", "canceled"],
+      "default": "pending",
+      "description": "Payment status reflecting the current state of the Payment Intent"
+    },
+    "customerEmail": {
+      "type": "email",
+      "description": "Customer email address for payment confirmation"
+    },
+    "metadata": {
+      "type": "json",
+      "description": "Flexible JSON metadata to store application-specific identifiers (e.g., orderId)"
+    },
+    "completedAt": {
+      "type": "datetime",
+      "description": "Timestamp when payment was marked as succeeded"
+    },
+    "errorMessage": {
+      "type": "text",
+      "description": "Error message stored when payment fails (from Stripe error response)"
+    }
+  }
+}

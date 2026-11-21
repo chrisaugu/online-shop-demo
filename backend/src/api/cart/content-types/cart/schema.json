@@ -1,0 +1,25 @@
+{
+    "kind": "collectionType",
+    "collectionName": "carts",
+    "info": {
+        "singularName": "cart",
+        "pluralName": "carts",
+        "displayName": "Cart"
+    },
+    "attributes": {
+        "items": {
+            "type": "relation",
+            "relation": "oneToMany",
+            "target": "api::product.product",
+            "mappedBy": "item"
+        },
+        "quantity": {
+            "type": "decimal",
+            "required": true
+        },
+        "total": {
+            "type": "decimal",
+            "required": true
+        }
+    }
+}

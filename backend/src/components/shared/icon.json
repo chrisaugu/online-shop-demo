@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_shared_icons",
+  "info": {
+    "displayName": "Icon",
+    "icon": "alien",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "copyright": {
+      "type": "string"
+    }
+  }
+}

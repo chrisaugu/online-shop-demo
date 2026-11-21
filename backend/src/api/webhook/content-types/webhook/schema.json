@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stripe_webhook_events",
+  "info": {
+    "singularName": "webhook",
+    "pluralName": "webhooks",
+    "displayName": "Stripe Webhook Event",
+    "description": "Stripe events received by the application"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "eventId": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "eventType": {
+      "type": "string",
+      "required": true
+    },
+    "payload": {
+      "type": "json"
+    },
+    "processed": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}

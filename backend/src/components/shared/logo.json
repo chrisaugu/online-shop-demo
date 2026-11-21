@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_logos",
+  "info": {
+    "displayName": "Logo",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}
